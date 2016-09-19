@@ -1,0 +1,12 @@
+import java.util.Scanner;
+
+public class Exercise_1 {
+	public static void main(String[] args){
+		int userNum;
+		System.out.print("Enter a new number: ");
+		userNum = screen.nextInt();
+		userNum = userNum + 20;
+		System.out.println("Your new number plus 20 is " + userNum);
+		screen.close();
+		}
+}

@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Exercise_1 {
+	public static void main(String[] args){
+		int userNum;
+		Scanner screen = new Scanner(System.in);
+		System.out.print("Enter a new number: ");
+		try{
+			userNum = screen.nextInt();
+			userNum = userNum + 20;
+			System.out.println("Your new number plus 20 is " + userNum);
+		} catch (Exception e) {
+			System.out.println("Please enter an integer");
+			System.out.print("Enter a new number: ");
+
+		}
+		screen.close();
+		}
+}

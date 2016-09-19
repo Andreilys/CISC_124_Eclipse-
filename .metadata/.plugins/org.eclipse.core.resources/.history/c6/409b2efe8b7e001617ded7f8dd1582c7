@@ -1,0 +1,14 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class gameOfNim {
+	
+	public static int startingMarbles() {
+		int startingMarbles = (int) Math.random();
+		return startingMarbles;
+	}
+	
+	public static void main(String[] args){
+		
+	}
+}
