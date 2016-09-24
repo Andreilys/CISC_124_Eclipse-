@@ -4,9 +4,13 @@
 // implementing scanner class to query the user
 // 
 import java.util.Random;
+import java.util.Scanner;
+
+//TODO: clean up my assignment, organize the methods
+//TODO: explore more complex strategy
 
 public class Assn1_12al104 {
-	final static int winningScore = 20;
+	final static int winningScore = 100;
 	private static final String[] numNames = {
 		    "",
 		    " one",
@@ -16,7 +20,12 @@ public class Assn1_12al104 {
 		    " five",
 		    " six",
 		    };
+	private static Scanner screen;
 	
+	
+	//TODO turn into returning an array?
+	//TODO make a random number generator?
+	//TODO: have someone proofread this assignment
 	public static int rollDice() {
 		Random r = new Random();
 		int Low = 1;
@@ -30,7 +39,7 @@ public class Assn1_12al104 {
 		int turnScore = 0;
 		boolean turnOver = false;
 		while (!turnOver){
-			if ((totalScore + turnScore) > winningScore){
+			if ((totalScore + turnScore) >= winningScore){
 				return (totalScore + turnScore);
 			}
 			// turn into an array
@@ -39,6 +48,7 @@ public class Assn1_12al104 {
 			String turnResponse = interpretDiceRoll(firstRoll, secondRoll, (turnScore + totalScore), humansTurn);
 			if (turnResponse == "Double Ones"){
 				totalScore = 0;
+				turnScore = 0;
 				turnOver = true;
 			}
 			else if (turnResponse == "Single One") {
@@ -50,9 +60,54 @@ public class Assn1_12al104 {
 			}
 			else {
 				turnScore += firstRoll + secondRoll;
+				//TODO: should this be turned into a method?
+				if ((totalScore + turnScore) >= winningScore){
+					return (totalScore + turnScore);
+				}
+				// TODO: turn into a variable?
+				if (!interestInRolling(humansTurn, turnScore)){
+					turnOver = true;
+				}
 			}
 		}
 		return (totalScore + turnScore);
+	}
+	
+	public static Boolean interestInRolling(boolean humansTurn, int turnScore){
+		if(humansTurn){
+			System.out.println("Roll again? (Enter 'y' or 'n'):");
+			screen = new Scanner(System.in);
+			String userInput = screen.nextLine();
+			System.out.println(userInput);
+			//TODO: should we check to make sure user input isn't malicious?
+			switch(userInput) {
+				case "y": 
+			 		return true;
+				case "n":
+			 		return false;
+				case "Y":
+					return true;
+				case "N":
+					return false;
+				default:
+					System.out.println("Incorrect entry, please enter either a y or n");
+					if(interestInRolling(humansTurn, turnScore)){
+						return true;
+					}
+					else{
+						return false;
+					}
+			}
+		} 
+		else {
+			//TODO come up with a better strategy for computer
+			if (turnScore < 40){
+				return true;
+			} else {
+				return false;
+			}
+		}
+	
 	}
 	
 	public static String interpretDiceRoll(int diceRollOne, int diceRollTwo, int totalScore, boolean humansTurn){
@@ -60,7 +115,6 @@ public class Assn1_12al104 {
 		
 		System.out.println(currentPlayer+" rolled:" + numToWord(diceRollOne) + " +" + numToWord(diceRollTwo));
 		int turnSum = diceRollOne + diceRollTwo;
-		// first dice option
 		if (diceRollOne == 1 && diceRollTwo == 1){
 			System.out.println("TURN OVER!");
 			return "Double Ones";
@@ -106,7 +160,6 @@ public class Assn1_12al104 {
 		int humanScore = 0;
 		int computerScore = 0;
 		int round = 0;
-//		System.out.println("This is the human score " + humanScore);
 		while (!gameOver) {
 			String currentPlayer = whoIsPlaying(humansTurn);
 			System.out.println(currentPlayer +"'s turn is starting.");
@@ -122,7 +175,9 @@ public class Assn1_12al104 {
 			}
 			round ++;
 			if (round % 2 == 0){
+				//TODO: prompt user to press enter and wait until that happens
 				System.out.println("Player's sum is: " + humanScore + ", Computer's sum is: " + computerScore + ". Press <enter> to start round " + round / 2);
+
 			}
 		}
 	}

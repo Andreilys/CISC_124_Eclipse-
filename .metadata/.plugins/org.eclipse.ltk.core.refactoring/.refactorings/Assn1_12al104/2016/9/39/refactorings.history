@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Convert local variable &apos;Assn1_12al104.interestInRolling().screen&apos; in &apos;Assn1_12al104.interestInRolling()&apos; to field&#x0A;- Original project: &apos;Assn1_12al104&apos;&#x0A;- Original element: &apos;Assn1_12al104.interestInRolling().screen&apos;&#x0A;- Field name: &apos;screen&apos;&#x0A;- Initialize field in method&#x0A;- Declared visibility: &apos;private&apos;&#x0A;- Declare field &apos;static&apos;" description="Convert local variable &apos;screen&apos; to field" final="false" flags="2" id="org.eclipse.jdt.ui.promote.temp" initialize="1" input="/src&lt;{Assn1_12al104.java" name="screen" selection="1829 31" stamp="1474677737020" static="true" version="1.0" visibility="2"/>
+</session>
