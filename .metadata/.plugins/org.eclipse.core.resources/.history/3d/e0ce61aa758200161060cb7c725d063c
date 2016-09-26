@@ -1,0 +1,14 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+
+
+public class Ass2_12al104 {
+
+	public static void main(String[] args) {
+		String csvFile = "Users/andreilyskov/Desktop/CISC_124_Eclipse /Assn2_12al104/src/Loggers.csv"
+	}
+	
+}

@@ -13,6 +13,7 @@ com.gradleware.tooling.utils,0.12.0.v20160425083245,file:/Users/andreilyskov/.p2
 com.ibm.icu,56.1.0.v201601250100,file:/Users/andreilyskov/.p2/pool/plugins/com.ibm.icu_56.1.0.v201601250100.jar,4,false
 com.jcraft.jsch,0.1.53.v201508180515,file:/Users/andreilyskov/.p2/pool/plugins/com.jcraft.jsch_0.1.53.v201508180515.jar,4,false
 com.sun.el,2.2.0.v201303151357,file:/Users/andreilyskov/.p2/pool/plugins/com.sun.el_2.2.0.v201303151357.jar,4,false
+impexeditor.core,1.6.0,file:/Users/andreilyskov/.p2/pool/plugins/impexeditor.core_1.6.0.jar,4,false
 javaewah,0.7.9.v201605172130,file:/Users/andreilyskov/.p2/pool/plugins/javaewah_0.7.9.v201605172130.jar,4,false
 javax.annotation,1.2.0.v201602091430,file:/Users/andreilyskov/.p2/pool/plugins/javax.annotation_1.2.0.v201602091430.jar,4,false
 javax.el,2.2.0.v201303151357,file:/Users/andreilyskov/.p2/pool/plugins/javax.el_2.2.0.v201303151357.jar,4,false

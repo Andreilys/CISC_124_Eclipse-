@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<config date="1473798844286" transient="false">
+<config date="1474736528114" transient="false">
 	<site updateable="true" url="file:/Users/andreilyskov/.p2/pool/" enabled="true" policy="MANAGED-ONLY">
 		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.13.1.v20160405-1820" url="features/org.eclipse.ecf.filetransfer.feature_3.13.1.v20160405-1820/">
 		</feature>
@@ -212,6 +212,8 @@
 		<feature id="org.eclipse.fx.ide.pde.feature" version="2.4.0.201605112122" url="features/org.eclipse.fx.ide.pde.feature_2.4.0.201605112122/">
 		</feature>
 		<feature id="org.eclipse.uml2.common" version="2.1.0.v20160516-0939" url="features/org.eclipse.uml2.common_2.1.0.v20160516-0939/">
+		</feature>
+		<feature id="impexeditor.feature" version="1.6.0" url="features/impexeditor.feature_1.6.0/">
 		</feature>
 		<feature id="org.eclipse.jgit" version="4.4.0.201606070830-r" url="features/org.eclipse.jgit_4.4.0.201606070830-r/">
 		</feature>
